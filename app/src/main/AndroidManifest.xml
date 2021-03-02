@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.mkvat.hospitalapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Material.light">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".FinddoctorActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".DisplayDoctor"
+            android:parentActivityName=".FinddoctorActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FinddoctorActivity" />
+        </activity>
+        <activity
+            android:name=".BookActivity"
+            android:parentActivityName=".DisplayDoctor">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayDoctor" />
+        </activity>
+        <activity
+            android:name=".PatientDetails"
+            android:parentActivityName=".BookActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DisplayDoctor" />
+        </activity>
+        <activity
+            android:name=".GenerateDrReceipt"
+            android:parentActivityName=".PatientDetails">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PatientDetails" />
+        </activity>
+        <activity
+            android:name=".LabAppointmentActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".CalenderControl"
+            android:parentActivityName=".LabAppointmentActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LabAppointmentActivity" />
+        </activity>
+        <activity
+            android:name=".GenerateLabReceipt"
+            android:parentActivityName=".CalenderControl">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CalenderControl" />
+        </activity>
+        <activity
+            android:name=".UpdateLabReceipt"
+            android:parentActivityName=".CalenderControl">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CalenderControl" />
+        </activity>
+
+        <activity
+            android:name=".PaymentActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+
+            android:name=".PaymentMethod"
+            android:parentActivityName=".PaymentActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PaymentActivity" />
+        </activity>
+        <activity
+
+            android:name=".EnterCardDetails"
+            android:parentActivityName=".PaymentMethod">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PaymentMethod" />
+        </activity>
+        <activity
+            android:name=".CalculateBMI"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
